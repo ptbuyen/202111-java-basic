@@ -8,7 +8,7 @@ public class DomainBuilder {
         String finalDomainType;
 
         urlPrefix = getUrlPrefix(sslType);
-        finalDomainType = getFinalDoaminType(domainType);
+        finalDomainType = getFinalDomainType(domainType);
 
         return urlPrefix.concat("://").concat(domainName).concat(finalDomainType);
     }
@@ -29,7 +29,7 @@ public class DomainBuilder {
         return  urlPrefix;
     }
 
-    private static String getFinalDoaminType(DomainType domainType) {
+    private static String getFinalDomainType(DomainType domainType) {
         String finalDomainType = "";
         switch (domainType){
             case NET:
