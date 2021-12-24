@@ -4,6 +4,15 @@ import java.security.SecureRandom;
 
 public abstract class Animal {
 
-    protected abstract int speed();
+    private int speed;
+
+    public Animal(int speed) {
+        this.speed = new SecureRandom().nextInt(speed + 1);;
+    }
+
     protected abstract boolean flyable();
+
+    public int getSpeed() {
+        return speed;
+    }
 }
